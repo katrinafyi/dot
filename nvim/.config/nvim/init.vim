@@ -25,12 +25,17 @@ nnoremap <Leader>0 :10b<CR>
 
 " Terminal mode mappings for moving around and exiting terminal mode
 tnoremap <C-\><C-\> <C-\><C-n>
-tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc><Esc> <C-\><C-n>
+
+
 
 set shell=/bin/zsh
 
 autocmd TermOpen * startinsert " Insert mode when opening terminal
 autocmd TermClose * :q
+
+autocmd BufWinEnter,WinEnter term://* startinsert
+
 
 tnoremap <A-h> <C-\><C-N><C-w>h
 tnoremap <A-j> <C-\><C-N><C-w>j
@@ -65,3 +70,4 @@ nnoremap <Space> :
 nnoremap \\ :q<CR>
 nnoremap \! :q!<CR>
 
+set mouse=a

@@ -16,11 +16,13 @@ function zvm_config() {
   ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
 }
 export ZSHRCD=~/.zshrc.d
-#source ~/.zshrc.d/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+zvm_after_init_commands+=("bindkey '^[[A' history-substring-search-up" "bindkey '^[[B' history-substring-search-down")
+source ~/.zshrc.d/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 #source ~/.zshrc.d/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+#bindkey "^[[A" history-beginning-search-backward
+#bindkey "^[[B" history-beginning-search-forward
+
 
 bindkey -M emacs '^[[3;5~' kill-word
 bindkey -M emacs '^[D' kill-word
