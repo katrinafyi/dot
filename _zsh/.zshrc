@@ -1,14 +1,18 @@
 # Use powerline
 USE_POWERLINE="true"
-# Source manjaro-zsh-configuration
 
-source ~/init_opam.sh
+#source ~/init_opam.sh
 
 function zvm_config() {
   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
   ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+  ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
 }
-source ~/.zshrc.d/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+#source ~/.zshrc.d/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+#source ~/.zshrc.d/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 bindkey -M emacs '^[[3;5~' kill-word
 bindkey -M emacs '^[D' kill-word
