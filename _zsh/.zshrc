@@ -18,7 +18,7 @@ function zvm_config() {
 export ZSHRCD=~/.zshrc.d
 zvm_after_init_commands+=("bindkey '^[[A' history-substring-search-up" "bindkey '^[[B' history-substring-search-down")
 source ~/.zshrc.d/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-#source ~/.zshrc.d/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
+source ~/.zshrc.d/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 
 #bindkey "^[[A" history-beginning-search-backward
 #bindkey "^[[B" history-beginning-search-forward

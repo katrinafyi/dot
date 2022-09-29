@@ -1,0 +1,10 @@
+{
+  "languageserver": {
+    "ocaml": {
+      "command": "ocamllsp",
+      "rootPatterns": ["dune-project", "*.opam"],
+      "trace.server": "verbose",
+      "filetypes": ["ocaml"]
+    }
+  }
+}
