@@ -79,9 +79,9 @@ export LESS=-R
 ## Plugins section: Enable fish style features
 # Use syntax highlighting
 d=$(dirname ${(%):-%x} )
-source $d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Use history substring search
-source $d/zsh-history-substring-search/zsh-history-substring-search.zsh
+#source $d/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up

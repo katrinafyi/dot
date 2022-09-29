@@ -1,4 +1,9 @@
 set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+set foldmethod=indent
+set foldlevel=99
+set nonumber
+
+highlight clear SignColumn
 
 set wildchar=<Tab> wildmenu wildmode=full
 set wildcharm=<C-Z>

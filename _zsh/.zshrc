@@ -6,17 +6,24 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Use powerline
-USE_POWERLINE="true"
+#USE_POWERLINE="true"
 
 #source ~/init_opam.sh
 
 function zvm_config() {
   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-  ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-  ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
+  ZVM_VI_INSERT_ESCAPE_BINDKEY=";'"
+  #ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
 }
 export ZSHRCD=~/.zshrc.d
-zvm_after_init_commands+=("bindkey '^[[A' history-substring-search-up" "bindkey '^[[B' history-substring-search-down")
+zvm_after_init_commands+=(
+  "bindkey '^[[A' history-substring-search-up"
+  "bindkey '^[[B' history-substring-search-down"
+  "bindkey '^[[1;5C' emacs-forward-word"
+  "bindkey '^[[1;5D' emacs-backward-word"
+  "bindkey '^H' backward-kill-word"
+  "bindkey '^[[3;5~' kill-word"
+)
 source ~/.zshrc.d/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source ~/.zshrc.d/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh
 
@@ -24,10 +31,7 @@ source ~/.zshrc.d/zsh-history-substring-search/zsh-history-substring-search.plug
 #bindkey "^[[B" history-beginning-search-forward
 
 
-bindkey -M emacs '^[[3;5~' kill-word
-bindkey -M emacs '^[D' kill-word
-bindkey '^[[1;5C' emacs-forward-word
-bindkey '^[[1;5D' emacs-backward-word
+
 
 for f in ~/.zshrc.d/*; do
   if [[ -f "$f" ]]; then
