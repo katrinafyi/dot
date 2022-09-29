@@ -7,5 +7,10 @@
       "filetypes": ["ocaml"]
     }
   },
-  "diagnostic.checkCurrentLine": true
+  "diagnostic.checkCurrentLine": false,
+  "diagnostic.enableMessage": "jump",
+  "hover.target": "float",
+  "hover.floatConfig": {
+    "maxHeight": 10
+  }
 }

@@ -2,12 +2,15 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 set foldmethod=indent
 set foldlevel=99
 set nonumber
+set virtualedit=all
 
 highlight clear SignColumn
 
 set wildchar=<Tab> wildmenu wildmode=full
 set wildcharm=<C-Z>
 nnoremap <F10> :b <C-Z>
+
+"let mapleader = " "
 
 " Mappings to access buffers (don't use "\p" because a
 " delay before pressing "p" would accidentally paste).
@@ -29,11 +32,14 @@ nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>d :bd<CR>
+
 " Terminal mode mappings for moving around and exiting terminal mode
 tnoremap \\ <C-\><C-n>
 "tnoremap <Esc><Esc> <C-\><C-n>
 
-
+autocmd BufWritePre * :%s/\s\+$//e
 
 set shell=/bin/zsh
 
@@ -56,10 +62,10 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-nnoremap <A-w>h <C-w>v
-nnoremap <A-w>l <C-w>v <C-\><C-N><C-w><Right>
-nnoremap <A-w>k <C-w>s
-nnoremap <A-w>j <C-w>s <C-\><C-N><C-w><Down>
+nmap <A-w>h <C-w>v
+nmap <A-w>l <C-w>v<C-\><C-N><C-w>l
+nmap <A-w>k <C-w>s
+nmap <A-w>j <C-w>s<C-\><C-N><C-w>j
 
 tnoremap <A-w>h <C-\><C-N><C-w>v  <C-\><C-N>:enew<CR>
 tnoremap <A-w>l <C-\><C-N><C-w>v <C-\><C-N> <C-w><Right> <C-\><C-N>:enew<CR>
@@ -76,7 +82,7 @@ inoremap ;' <esc>
 "vnoremap jk <esc>
 "inoremap <S-CR> <Esc>
 
-nnoremap <Space> :
+"nnoremap <Space> :
 
 nnoremap \\ :q<CR>
 nnoremap \! :q!<CR>
@@ -97,6 +103,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-sleuth'
 
 Plug 'godlygeek/tabular'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
