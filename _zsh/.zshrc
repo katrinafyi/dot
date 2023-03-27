@@ -12,7 +12,7 @@ fi
 
 function zvm_config() {
   ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-  ZVM_VI_INSERT_ESCAPE_BINDKEY=";'"
+  #ZVM_VI_INSERT_ESCAPE_BINDKEY=";'"
   #ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
 }
 export ZSHRCD=~/.zshrc.d
@@ -33,7 +33,6 @@ source ~/.zshrc.d/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 
-
 for f in ~/.zshrc.d/*; do
   if [[ -f "$f" ]]; then
     source "$f"
@@ -48,3 +47,6 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias grep='grep --color=auto'
+
+
+setopt INC_APPEND_HISTORY
