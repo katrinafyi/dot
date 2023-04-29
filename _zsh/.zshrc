@@ -47,6 +47,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias grep='grep --color=auto'
+alias zy='sudo zypper'
 
 
 setopt INC_APPEND_HISTORY
