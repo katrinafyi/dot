@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+ <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="text/x-dafny">
+    <comment>Dafny source code</comment>
+    <glob pattern="*.dfy"/>
+  </mime-type>
+ </mime-info>
