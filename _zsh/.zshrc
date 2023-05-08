@@ -47,6 +47,17 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias grep='grep --color=auto'
+alias zy='sudo zypper'
 
 
 setopt INC_APPEND_HISTORY
+
+# load suse cnf, if it exists.
+if [[ -f /etc/zsh_command_not_found ]]; then
+  function command_not_found_handler cnf_handler {
+    if [ -x /usr/bin/python3 ] && [ -x /usr/bin/command-not-found ]; then
+      /usr/bin/command-not-found "${(Q)1}" zypp
+    fi
+    return 127
+  }
+fi
