@@ -43,11 +43,15 @@ done
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 command -v exa &>/dev/null && alias ls=exa
+! command -v poweroff &>/dev/null && alias poweroff='systemctl poweroff'
+! command -v reboot &>/dev/null && alias reboot='systemctl reboot'
+! command -v halt &>/dev/null && alias halt='systemctl halt'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias grep='grep --color=auto'
 alias zy='sudo zypper'
+
 
 
 setopt INC_APPEND_HISTORY
