@@ -1,2 +1,5 @@
 .uuid
 .netrwhist
+
+# nvim packer packages downloaded locally
+nvim/.local/share/nvim/site/pack/packer/
