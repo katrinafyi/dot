@@ -3,3 +3,5 @@
 
 # nvim packer packages downloaded locally
 nvim/.local/share/nvim/site/pack/packer/
+!nvim/.config/nvim/lua/user/
+!nvim/.config/nvim/lua/user/**
