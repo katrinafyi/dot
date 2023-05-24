@@ -38,8 +38,6 @@ for f in ~/.zshrc.d/*.zsh; do
   fi
 done
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 command -v exa &>/dev/null && alias ls=exa
 ! command -v poweroff &>/dev/null && alias poweroff='systemctl poweroff'
@@ -64,3 +62,4 @@ if [[ -f /etc/zsh_command_not_found ]]; then
     return 127
   }
 fi
+
