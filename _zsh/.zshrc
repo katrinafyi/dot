@@ -46,9 +46,9 @@ command -v exa &>/dev/null && alias ls=exa
 
 platform='unknown'
 unamestr=$(uname)
-if [ "$unamestr" = 'Linux' ]; then
+if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
-elif [ "$unamestr" = *'BSD' ]; then
+elif [[ "$unamestr" == *'BSD' ]]; then
    platform='bsd'
 fi
 
