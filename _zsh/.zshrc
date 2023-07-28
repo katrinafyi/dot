@@ -60,6 +60,10 @@ if [[ $platform == linux ]]; then
   alias zy='sudo zypper'
 fi
 
+if command -v nvim &>/dev/null; then
+  export EDITOR=nvim
+fi
+
 
 
 setopt INC_APPEND_HISTORY
