@@ -43,11 +43,22 @@ command -v exa &>/dev/null && alias ls=exa
 ! command -v poweroff &>/dev/null && alias poweroff='systemctl poweroff'
 ! command -v reboot &>/dev/null && alias reboot='systemctl reboot'
 ! command -v halt &>/dev/null && alias halt='systemctl halt'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias grep='grep --color=auto'
-alias zy='sudo zypper'
+
+platform='unknown'
+unamestr=$(uname)
+if [ "$unamestr" = 'Linux' ]; then
+   platform='linux'
+elif [ "$unamestr" = *'BSD' ]; then
+   platform='bsd'
+fi
+
+if [[ $platform == linux ]]; then 
+  alias ll='ls -l'
+  alias la='ls -a'
+  alias lla='ls -la'
+  alias grep='grep --color=auto'
+  alias zy='sudo zypper'
+fi
 
 
 
