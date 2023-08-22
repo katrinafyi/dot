@@ -120,13 +120,8 @@ SETUVAR tide_node_bg_color:normal
 SETUVAR tide_node_color:green
 SETUVAR tide_node_icon:\u2b22
 SETUVAR tide_os_bg_color:normal
-<<<<<<< HEAD
-SETUVAR tide_os_color:brwhite
-SETUVAR tide_os_icon:\uf303
-=======
 SETUVAR tide_os_color:normal
 SETUVAR tide_os_icon:\uf314
->>>>>>> 81de6b1de17bada9a103a9dbd24f58fde1824a84
 SETUVAR tide_php_bg_color:normal
 SETUVAR tide_php_color:blue
 SETUVAR tide_php_icon:\ue608
@@ -134,13 +129,8 @@ SETUVAR tide_private_mode_bg_color:normal
 SETUVAR tide_private_mode_color:brwhite
 SETUVAR tide_private_mode_icon:\ufaf8
 SETUVAR tide_prompt_add_newline_before:false
-<<<<<<< HEAD
-SETUVAR tide_prompt_color_frame_and_connection:brblack
-SETUVAR tide_prompt_color_separator_same_color:brblack
-=======
 SETUVAR tide_prompt_color_frame_and_connection:6C6C6C
 SETUVAR tide_prompt_color_separator_same_color:949494
->>>>>>> 81de6b1de17bada9a103a9dbd24f58fde1824a84
 SETUVAR tide_prompt_icon_connection:\x20
 SETUVAR tide_prompt_min_cols:34
 SETUVAR tide_prompt_pad_items:false
@@ -178,7 +168,7 @@ SETUVAR tide_terraform_bg_color:normal
 SETUVAR tide_terraform_color:magenta
 SETUVAR tide_terraform_icon:\x1d
 SETUVAR tide_time_bg_color:normal
-SETUVAR tide_time_color:eee
+SETUVAR tide_time_color:brcyan
 SETUVAR tide_time_format:\x25T
 SETUVAR tide_toolbox_bg_color:normal
 SETUVAR tide_toolbox_color:magenta
