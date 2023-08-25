@@ -1,4 +1,4 @@
-function _tide_item_cmd_duration
+function _tide_item_cmd_duration2
     test $CMD_DURATION -gt $tide_cmd_duration_threshold && t=(
             math -s0 "$CMD_DURATION/3600000" # Hours
             math -s0 "$CMD_DURATION/60000"%60 # Minutes
