@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/rina/.config/autostart/swap_esc_caps.sh
+Exec=/home/rina/.local/bin/swap_esc_caps.sh
 Icon=dialog-scripts
 Name=swap_esc_caps.sh
 Type=Application

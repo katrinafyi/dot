@@ -1,0 +1,11 @@
+[user]
+	name = rina
+	email = k@rina.fyi
+[alias]
+	cl = clone
+	c = commit
+	a = add
+	s = status
+	co = checkout
+	l = log
+	d = diff
