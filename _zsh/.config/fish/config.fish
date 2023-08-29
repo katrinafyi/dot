@@ -5,4 +5,5 @@ if status is-interactive
     abbr -a -- g git
     bind \b backward-kill-path-component
     bind \e\[3\;5\~ kill-word
+    bind \cZ echo fg
 end
