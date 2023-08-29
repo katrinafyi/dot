@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 
-setxkbmap -option caps:swapescape
+nohup bash -c 'while true; do setxkbmap -option caps:swapescape; sleep 2; done' >/dev/null &
