@@ -9,7 +9,7 @@ function _tide_item_cmd_duration2
     else if test $t[2] != 0
         _tide_print_item cmd_duration $tide_cmd_duration_icon' ' "$t[2]m $t[3]s"
     else if test $t[3] != 0
-        _tide_print_item cmd_duration $tide_cmd_duration_icon' ' "$t[3]s"
+        s=(printf "%."$tide_cmd_duration_decimals"f" (math "$CMD_DURATION/1000%60")) _tide_print_item cmd_duration $tide_cmd_duration_icon' ' $s"s"
     else
         _tide_print_item cmd_duration $tide_cmd_duration_icon' ' "$t[4]ms"
     end
