@@ -9,3 +9,5 @@
 	co = checkout
 	l = log
 	d = diff
+[core]
+	editor = nvim

@@ -11,4 +11,8 @@ if status is-interactive
     set -U tide_os_bg_color normal
     set -U tide_os_color white
     set -U tide_os_icon $os_branding_icon
+
+    if which ruby >/dev/null && which gem >/dev/null
+        fish_add_path "$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
+    end
 end
