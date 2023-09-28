@@ -15,4 +15,5 @@ if status is-interactive
     if which ruby >/dev/null && which gem >/dev/null
         fish_add_path "$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
     end
+    fish_add_path ~/.ghcup/bin
 end
