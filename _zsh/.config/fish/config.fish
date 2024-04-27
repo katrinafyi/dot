@@ -3,6 +3,9 @@ if status is-interactive
     abbr -a -- zy 'sudo zypper'
     abbr -a -- vim nvim
     abbr -a -- g git
+    abbr -a -- cd pushd
+    abbr -a -- - popd
+
     bind \b backward-kill-path-component
     bind \e\[3\;5\~ kill-word
     bind \cZ echo fg
@@ -15,5 +18,9 @@ if status is-interactive
     if which ruby >/dev/null && which gem >/dev/null
         fish_add_path "$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
     end
-    fish_add_path ~/.ghcup/bin
+    for p in ~/.ghcup/bin ~/progs/mx
+        if [ -d $p ]
+            fish_add_path $p
+        end
+    end
 end
