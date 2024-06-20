@@ -24,3 +24,7 @@ if status is-interactive
         end
     end
 end
+
+# >>> coursier install directory >>>
+set -gx PATH "$PATH:/home/rina/.local/share/coursier/bin"
+# <<< coursier install directory <<<
