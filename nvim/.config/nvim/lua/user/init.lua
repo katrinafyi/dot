@@ -10,6 +10,10 @@ return {
         vim.opt_local.wrap = true
       end
     })
+
+    vim.keymap.set('n', 'S', function ()
+      require('leap').leap { target_windows = { vim.api.nvim_get_current_win() } }
+    end)
   end,
   colorscheme = "ayu",
 
