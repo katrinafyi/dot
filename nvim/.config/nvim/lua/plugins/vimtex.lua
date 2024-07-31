@@ -30,7 +30,7 @@ return {
         pattern = "tex",
         callback = function(event)
           local opts = { noremap = true, silent = true }
-          vim.api.nvim_set_keymap("n", "<leader>lf", ":compiler textidote | lmake<CR>:lwindow<CR>", opts)
+          vim.api.nvim_set_keymap("n", "<leader>lf", ":silent compiler textidote | lmake<CR>:lwindow<CR>", opts)
           vim.cmd ":setlocal spell spelllang=en_us"
 
           local wk = require "which-key"
