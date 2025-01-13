@@ -9,6 +9,7 @@
 	co = checkout
 	l = log
 	d = diff
+	pu = pull --all
 [core]
 	editor = nvim
 [pull]
