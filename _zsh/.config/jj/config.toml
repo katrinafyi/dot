@@ -1,0 +1,10 @@
+[user]
+name = "rina"
+email = "k@rina.fyi"
+
+[snapshot]
+auto-track = "none()"
+
+[aliases]
+l = ["log", '-r', 'ancestors(@, 4) | descendants(@, 4)', "--no-pager"]
+lmain = ["log", "-r", "(main..@):: | (main..@)-"]
