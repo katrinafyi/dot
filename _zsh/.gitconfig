@@ -20,3 +20,5 @@
 	pushInsteadOf = kde:
 [push]
 	autoSetupRemote = true
+[diff]
+	wsErrorHighlight = all
