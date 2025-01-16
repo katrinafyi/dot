@@ -1,0 +1,17 @@
+[user]
+name = "rina"
+email = "k@rina.fyi"
+
+[snapshot]
+auto-track = "none()"
+
+[aliases]
+context = ["log", '-r', 'ancestors(@, 4) | descendants(@, 4)', "--no-pager"]
+s = ["status", "--no-pager"]
+lmain = ["log", "-r", "(main..@):: | (main..@)-"]
+fetch = ["git", "fetch", "--all-remotes"]
+remotebranches = ["log", "-r", '@ | ancestors(remote_bookmarks(), 2) | trunk()']
+localwork = ["log", "-r", '@ | ancestors(remote_bookmarks().., 2) | trunk()', '--no-pager']
+
+[ui]
+default-command = "context"

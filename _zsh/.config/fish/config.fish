@@ -2,7 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     abbr -a -- zy 'sudo zypper'
     abbr -a -- vim nvim
-    abbr -a -- g git
+    abbr -a -- gg jj
+    abbr -a -- j j
     abbr -a -- cd pushd
     abbr -a -- - popd
 

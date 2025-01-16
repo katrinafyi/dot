@@ -10,6 +10,7 @@
 	co = checkout
 	l = log
 	d = diff
+	pu = pull --all
 [core]
 	editor = nvim
 [pull]
@@ -24,3 +25,5 @@
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = /home/rina/.ssh/allowed_signers
+[diff]
+	wsErrorHighlight = all
