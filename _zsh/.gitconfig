@@ -1,6 +1,7 @@
 [user]
 	name = rina
 	email = k@rina.fyi
+	signingkey = /home/rina/.ssh/id_ed25519.pub
 [alias]
 	cl = clone
 	c = commit
@@ -19,3 +20,7 @@
 	pushInsteadOf = kde:
 [push]
 	autoSetupRemote = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /home/rina/.ssh/allowed_signers
