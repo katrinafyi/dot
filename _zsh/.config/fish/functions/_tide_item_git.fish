@@ -1,8 +1,8 @@
 function _tide_item_git
-    if fish_jj_prompt &>/dev/null
-        set_color normal; fish_jj_prompt
-        return
-    end
+    # if fish_jj_prompt &>/dev/null
+    #     set_color normal; fish_jj_prompt
+    #     return
+    # end
 
     if git branch --show-current 2>/dev/null | string shorten -"$tide_git_truncation_strategy"m$tide_git_truncation_length | read -l location
         git rev-parse --git-dir --is-inside-git-dir | read -fL gdir in_gdir

@@ -6,7 +6,8 @@ email = "k@rina.fyi"
 auto-track = "none()"
 
 [aliases]
-context = ["log", '-r', 'ancestors(@, 4) | descendants(@, 4)', "--no-pager"]
+# context = ["log", '-r', 'ancestors(@, 4) | descendants(@, 4)', "--no-pager"]
+context = ["log", "-r", 'ancestors(@,3)::descendants(@,3)', "--no-pager"]
 s = ["status", "--no-pager"]
 lmain = ["log", "-r", "(main..@):: | (main..@)-"]
 fetch = ["git", "fetch", "--all-remotes"]

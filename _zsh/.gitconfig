@@ -11,6 +11,7 @@
 	l = log
 	d = diff
 	pu = pull --all
+	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%d%Creset%C(brightblack) - %cs%Creset' --abbrev-commit
 [core]
 	editor = nvim
 [pull]

@@ -4,6 +4,7 @@ if status is-interactive
     abbr -a -- vim nvim
     abbr -a -- gg jj
     abbr -a -- j j
+    abbr -a -- p pueue
     abbr -a -- cd pushd
     abbr -a -- - popd
 
@@ -29,3 +30,6 @@ end
 # >>> coursier install directory >>>
 set -gx PATH "$PATH:/home/rina/.local/share/coursier/bin"
 # <<< coursier install directory <<<
+
+
+direnv hook fish | source
