@@ -12,6 +12,8 @@
 	d = diff
 	pu = pull --all
 	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%d%Creset%C(brightblack) - %cs%Creset' --abbrev-commit
+	scalafmt = "!./mill scalafmt.reformat && git add -u && git c -m scalafmt && git push && :"
+
 [core]
 	editor = nvim
 [pull]
