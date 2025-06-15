@@ -27,8 +27,18 @@
     vim.cmd('nnoremap ]t :tnext<CR><CR>')
     vim.cmd('nnoremap [t :tprevious<CR><CR>')
     vim.cmd('nnoremap gf <C-]>')
+    function search_tags()
+      require("telescope.builtin").tags({ only_sort_tags = true, show_line = true, path_display = {"filename_first"}, show_kind=true, layout_strategy = "center", layout_config = {preview_cutoff = 5, anchor = 'N', height = 0.5} })
+    end
     vim.keymap.set("n", "<Leader>lf", function()
-   	require("telescope.builtin").tags({ only_sort_tags = true, show_line = true, path_display = {"filename_first"}, show_kind=true, layout_strategy = "center", layout_config = {preview_cutoff = 5, anchor = 'N', height = 0.5} })
+      search_tags()
+    end, opts)
+    vim.keymap.set("n", "<Leader>lF", function()
+      local word = vim.api.nvim_eval('expand("<cword>")')
+
+      search_tags()
+
+      vim.api.nvim_input(word .. "<Esc>")
     end, opts)
 
 
