@@ -31,5 +31,6 @@ end
 set -gx PATH "$PATH:/home/rina/.local/share/coursier/bin"
 # <<< coursier install directory <<<
 
-
-direnv hook fish | source
+if command -v direnv &>/dev/null
+    direnv hook fish | source
+end
