@@ -23,6 +23,15 @@
     vim.cmd('highlight LspCodeLens guifg=#626a73')
     vim.cmd('highlight! link LspInlayHint LspCodeLens')
 
+    vim.cmd(':set tags=./tags,tags,.git/tags')
+    vim.cmd('nnoremap ]t :tnext<CR><CR>')
+    vim.cmd('nnoremap [t :tprevious<CR><CR>')
+    vim.cmd('nnoremap gf <C-]>')
+    vim.keymap.set("n", "<Leader>lf", function()
+   	require("telescope.builtin").tags({ only_sort_tags = true, show_line = true, path_display = {"filename_first"}, show_kind=true, layout_strategy = "center", layout_config = {preview_cutoff = 5, anchor = 'N', height = 0.5} })
+    end, opts)
+
+
     vim.api.nvim_create_autocmd("BufEnter", {
       pattern = {"tex", "*.tex", "*.txt", "*.md"},
       callback = function(ev)
