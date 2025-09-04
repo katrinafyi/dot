@@ -11,8 +11,9 @@
 	l = log
 	d = diff
 	pu = pull --all
+	p = push
 	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%d%Creset%C(brightblack) - %cs%Creset' --abbrev-commit
-	scalafmt = "!./mill scalafmt.reformat && git add -u && git c -m scalafmt && git push && :"
+	scalafmt = "!./mill fmt && git add -u && git c -m scalafmt && git push && :"
 
 [core]
 	editor = nvim
@@ -30,3 +31,5 @@
 	allowedSignersFile = /home/rina/.ssh/allowed_signers
 [diff]
 	wsErrorHighlight = all
+[fetch]
+	parallel = 4

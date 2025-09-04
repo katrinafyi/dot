@@ -35,9 +35,7 @@
     end, opts)
     vim.keymap.set("n", "<Leader>lF", function()
       local word = vim.api.nvim_eval('expand("<cword>")')
-
       search_tags()
-
       vim.api.nvim_input(word .. "<Esc>")
     end, opts)
 

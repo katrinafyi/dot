@@ -39,12 +39,14 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "ocamllsp"
+      "ocamllsp",
+      "basillsp"
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      basillsp = { cmd={"/nix/store/wmka4j4y60v24ybpnjsnsl9c78m57z8z-ocaml5.3.0-basil_lsp-0.1.0-unstable-2025-07-11/bin/basilLSP"}, filetypes={"skill"}, root_dir = require("lspconfig.util").root_pattern("."),},
     },
     -- customize how language servers are attached
     handlers = {
