@@ -13,6 +13,7 @@
 	pu = pull --all
 	p = push
 	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%d%Creset%C(brightblack) - %cs%Creset' --abbrev-commit
+	on = oneline
 	scalafmt = "!./mill fmt && git add -u && git c -m scalafmt && git push && :"
 
 [core]
@@ -33,3 +34,15 @@
 	wsErrorHighlight = all
 [fetch]
 	parallel = 4
+# [merge]
+# 	conflictStyle = diff3
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+[alias]
+  # `git log` with patches shown with difftastic.
+  dl = -c diff.external=difft log -p --ext-diff
+  # Show the most recent commit with difftastic.
+  ds = -c diff.external=difft show --ext-diff
+  # `git diff` with difftastic.
+  dd = -c diff.external=difft diff
