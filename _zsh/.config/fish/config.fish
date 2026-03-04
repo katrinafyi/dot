@@ -25,6 +25,10 @@ if status is-interactive
             fish_add_path $p
         end
     end
+
+    if [ -x ~/.cargo/bin/cargo-mommy ]
+        abbr -a -- cargo 'cargo mommy'
+    end
 end
 
 # >>> coursier install directory >>>
@@ -34,3 +38,6 @@ set -gx PATH "$PATH:/home/rina/.local/share/coursier/bin"
 if command -v direnv &>/dev/null
     direnv hook fish | source
 end
+
+export CARGO_MOMMYS_MOODS="chill/ominous/thirsty/yikes"
+
