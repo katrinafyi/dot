@@ -50,6 +50,22 @@
     vim.keymap.set('n', 'S', function ()
       require('leap').leap { target_windows = { vim.api.nvim_get_current_win() } }
     end)
+
+vim.filetype.add({ extension = { il = 'basilir' } })
+vim.api.nvim_create_autocmd('User', { pattern = 'TSUpdate',
+callback = function()
+  require('nvim-treesitter.parsers').basilir = {
+    install_info = {
+      path = '~/progs/obasil/tree-sitter',
+      -- optional entries:
+      files = { "src/parser.c" },
+      generate = true, -- only needed if repo does not contain pre-generated `src/parser.c`
+      generate_from_json = true, -- only needed if repo does not contain `src/grammar.json` either
+      queries = 'queries', -- also install queries from given directory
+    },
+  }
+end})
+vim.treesitter.language.register('basilir', {'basilir'})
   -- end,
 
 
