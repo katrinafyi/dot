@@ -39,5 +39,9 @@ if command -v direnv &>/dev/null
     direnv hook fish | source
 end
 
+if command -v opam &>/dev/null
+    eval (opam env)
+end
+
 export CARGO_MOMMYS_MOODS="chill/ominous/thirsty/yikes"
 
