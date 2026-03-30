@@ -29,6 +29,7 @@ Cypress
 .npm
 .fetchcache
 .emscriptencache
+.emscripten_cache
 /home/rina/.local/share/osu/cache
 .bundle
 .ivy2
@@ -50,7 +51,7 @@ emsdk
 /home/rina/.local/share/virtualenvs
 .venv
 dist-newstyle
-cpython-*.so
+*cpython-*.so
 .parsec
 /home/rina/.local/share/nvim
 Service Worker
@@ -64,12 +65,10 @@ Local Extension Settings
 .terraform
 .lexical
 /home/rina/.local/share/Steam
-/home/rina/.local/share/nvim/mason/packages
+mason/packages
 /home/rina/.local/share/PrismLauncher/cache
-/home/rina/.local/share/Steam/steamrt64
 /home/rina/.local/share/pnpm
-/home/rina/.local/share/Steam/appcache/librarycache
-/home/rina/.local/share/containers/storage
+/home/rina/.local/share/containers
 /home/rina/.local/share/JetBrains
 /home/rina/.local/state/cabal
 /home/rina/progs/madeline/buildweb
@@ -81,3 +80,16 @@ htmlcache
 /home/rina/vm
 basil/examples
 *.dll
+__pycache__
+.pytest_cache
+.ruff_cache
+.jekyll-cache
+.zsh/cache
+.godot
+.local/lib/python*
+.var
+.local/share/pipx
+.local/share/gem
+.local/share/discord_fm
+CMakeFiles
+*.o
