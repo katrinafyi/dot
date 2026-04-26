@@ -70,6 +70,8 @@ mason/packages
 /home/rina/.local/share/pnpm
 /home/rina/.local/share/containers
 /home/rina/.local/share/JetBrains
+/home/rina/.local/share/akonadi
+/home/rina/.local/share/discord_fm
 /home/rina/.local/state/cabal
 /home/rina/progs/madeline/buildweb
 /home/rina/.config/Code
@@ -93,3 +95,12 @@ __pycache__
 .local/share/discord_fm
 CMakeFiles
 *.o
+/var/log/audit
+/var/log/letsencrypt
+/var/log/private
+/var/log/Calamares.log
+/var/log/btmp
+/var/log/btmp.*
+/var/log/endeavour-install.log
+/var/log/firewalld
+/var/log/reboot-recommendation-trigger.log
