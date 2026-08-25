@@ -26,6 +26,10 @@ if status is-interactive
             fish_add_path $p
         end
     end
+
+    if [ -x ~/.cargo/bin/cargo-mommy ]
+        abbr -a -- cargo 'cargo mommy'
+    end
 end
 
 # >>> coursier install directory >>>
@@ -39,3 +43,6 @@ end
 if command -v opam &>/dev/null
     eval (opam env)
 end
+
+export CARGO_MOMMYS_MOODS="chill/ominous/thirsty/yikes"
+
