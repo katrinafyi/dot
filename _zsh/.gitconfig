@@ -46,3 +46,7 @@
   ds = -c diff.external=difft show --ext-diff
   # `git diff` with difftastic.
   dd = -c diff.external=difft diff
+
+[url "git@github.com:"]
+  pushInsteadOf = "https://github.com/"
+  pushInsteadOf = "git@github.com:"

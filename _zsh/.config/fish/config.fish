@@ -5,7 +5,8 @@ if status is-interactive
     abbr -a -- gg jj
     abbr -a -- j j
     abbr -a -- p pueue
-    abbr -a -- cd pushd
+    abbr -a -- g git
+    # abbr -a -- cd pushd
     abbr -a -- - popd
 
     bind \b backward-kill-path-component
@@ -33,4 +34,8 @@ set -gx PATH "$PATH:/home/rina/.local/share/coursier/bin"
 
 if command -v direnv &>/dev/null
     direnv hook fish | source
+end
+
+if command -v opam &>/dev/null
+    eval (opam env)
 end
