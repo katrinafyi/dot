@@ -30,6 +30,20 @@ return {
       filetype = "basilir",
     }
 
+
+    parser_config.boogie = {
+      install_info = {
+        url = "~/progs/tree-sitter-boogie",
+        -- url = "https://github.com/agle/bincaml",
+        -- revision = "main", -- change this if you want
+        -- location = "tree-sitter", -- tree-sitter subfolder inside repo
+        files = {"src/parser.c"},
+        generate_requires_npm = false,
+        requires_generate_from_grammar = true,
+      },
+      filetype = "boogie",
+    }
+
     require("nvim-treesitter.configs").setup(opts)
   end,
 }

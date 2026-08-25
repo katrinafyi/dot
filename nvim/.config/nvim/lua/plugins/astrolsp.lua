@@ -47,7 +47,7 @@ return {
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
       basillsp = {
-        cmd={"/home/rina/progs/obasil/_build/default/lsp/bin/main.exe"}, filetypes={"basilir"}, root_dir = require("lspconfig.util").root_pattern("."),},
+        cmd={"/nix/store/5yb37bjjrr6pynbikdlkbd5rscj7l1bq-ocaml5.4.1-bincaml_lsp-0.0/bin/bincaml_lsp"}, filetypes={"basilir"}, root_dir = require("lspconfig.util").root_pattern("."),},
       -- basillsp = { cmd={"/home/rina/progs/basls/_build/default/bin/lsp/main.exe"}, filetypes={"basilir"}, root_dir = require("lspconfig.util").root_pattern("."),},
     },
     -- customize how language servers are attached

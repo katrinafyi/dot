@@ -52,6 +52,7 @@
     end)
 
 vim.filetype.add({ extension = { il = 'basilir' } })
+vim.filetype.add({ extension = { bpl = 'boogie' } })
 vim.api.nvim_create_autocmd('User', { pattern = 'TSUpdate',
 callback = function()
   require('nvim-treesitter.parsers').basilir = {
