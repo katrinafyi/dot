@@ -15,9 +15,6 @@
 	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%d%Creset%C(brightblack) - %cs%Creset' --abbrev-commit
 	on = oneline
 	scalafmt = "!./mill fmt && git add -u && git c -m scalafmt && git push && :"
-
-[core]
-	editor = nvim
 [pull]
 	rebase = true
 [url "https://invent.kde.org/"]
