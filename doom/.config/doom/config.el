@@ -73,3 +73,9 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(with-eval-after-load 'evil
+  (define-key evil-motion-state-map (kbd "C-z") 'suspend-frame)
+  (define-key evil-emacs-state-map (kbd "C-z") 'suspend-frame)
+  (define-key evil-motion-state-map (kbd "C-x C-z") 'evil-emacs-state)
+  (define-key evil-emacs-state-map (kbd "C-x C-z") 'evil-exit-emacs-state))

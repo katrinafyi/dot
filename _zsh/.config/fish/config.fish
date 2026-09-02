@@ -8,6 +8,7 @@ if status is-interactive
     abbr -a -- g git
     # abbr -a -- cd pushd
     abbr -a -- - popd
+    abbr -a -- d 'doom emacs'
 
     bind \b backward-kill-path-component
     bind \e\[3\;5\~ kill-word
@@ -46,3 +47,4 @@ end
 
 export CARGO_MOMMYS_MOODS="chill/ominous/thirsty/yikes"
 
+fish_add_path ~/.config/emacs/bin
