@@ -19,7 +19,7 @@ if status is-interactive
     set -U tide_os_color white
     set -U tide_os_icon $os_branding_icon
 
-    if which ruby >/dev/null && which gem >/dev/null
+    if command -v ruby &>/dev/null && command -v gem &>/dev/null
         fish_add_path "$(ruby -r rubygems -e 'puts Gem.user_dir')/bin"
     end
     for p in ~/.ghcup/bin ~/progs/mx
@@ -38,7 +38,7 @@ if status is-interactive
             sudo mount --bind ~/.local/share/nix/root/nix /nix
         end
 
-        if [ -d /var/home/rina/.local/share/nix/root/nix ]
+        if ! [ -d /run/host/nix/store ] && [ -d /run/host/var/home/rina/.local/share/nix/root/nix ]
            echo 'Host /nix needs to be mounted!'
            flatpak-spawn --host pkexec bash -x -c '
 LIBMOUNT_FORCE_MOUNT2=always unshare --mount /usr/bin/bash -x -c "mount -o remount,rw / ; mkdir -p /nix"
