@@ -31,6 +31,21 @@ if status is-interactive
     if [ -x ~/.cargo/bin/cargo-mommy ]
         abbr -a -- cargo 'cargo mommy'
     end
+
+    if [ -f /run/.toolboxenv ]
+        if ! [ -d /nix/store ] && [ -d ~/.local/share/nix/root/nix ]
+            sudo mkdir -p /nix
+            sudo mount --bind ~/.local/share/nix/root/nix /nix
+        end
+
+        if [ -d /var/home/rina/.local/share/nix/root/nix ]
+           echo 'Host /nix needs to be mounted!'
+           flatpak-spawn --host pkexec bash -x -c '
+LIBMOUNT_FORCE_MOUNT2=always unshare --mount /usr/bin/bash -x -c "mount -o remount,rw / ; mkdir -p /nix"
+umount -q /nix
+mount --bind --read-only /var/home/rina/.local/share/nix/root/nix /nix'
+        end
+    end
 end
 
 # >>> coursier install directory >>>

@@ -75,7 +75,13 @@
 ;; they are implemented.
 
 (with-eval-after-load 'evil
+  (xterm-mouse-mode 1)
   (define-key evil-motion-state-map (kbd "C-z") 'suspend-frame)
   (define-key evil-emacs-state-map (kbd "C-z") 'suspend-frame)
   (define-key evil-motion-state-map (kbd "C-x C-z") 'evil-emacs-state)
   (define-key evil-emacs-state-map (kbd "C-x C-z") 'evil-exit-emacs-state))
+
+(with-eval-after-load 'neotree
+  (setq neo-theme 'nerd-icons))
+
+(setq confirm-kill-processes nil)
