@@ -48,7 +48,7 @@
   pushInsteadOf = "https://github.com/"
   pushInsteadOf = "git@github.com:"
 [filter "fish_variables"]
-	clean = /home/rina/dot/fish_variables-clean.sh
+	clean = /home/rina/dot/fish/fish_variables-clean.sh
 	smudge = cat
 [diff "fish_variables"]
-	textconv = /home/rina/dot/fish_variables-clean.sh
+	textconv = /home/rina/dot/fish/fish_variables-clean.sh
