@@ -52,3 +52,5 @@
 	smudge = cat
 [diff "fish_variables"]
 	textconv = /home/rina/dot/fish/fish_variables-clean.sh
+[core]
+	editor = vim

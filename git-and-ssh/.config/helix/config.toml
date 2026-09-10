@@ -1,0 +1,5 @@
+theme = "term16_dark"
+
+[keys.normal.space]
+w = ":write"
+q = ":quit-all"

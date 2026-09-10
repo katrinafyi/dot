@@ -69,11 +69,10 @@ end
 export CARGO_MOMMYS_MOODS="chill/ominous/thirsty/yikes"
 
 fish_add_path ~/.config/emacs/bin
-if command -v nvim &>/dev/null
-    export VISUAL="nvim"
-    export EDITOR="nvim"
-end
-if command -v doom-emacs &>/dev/null
-    export VISUAL="doom-emacs"
-    export EDITOR="doom-emacs"
+
+for ed in vim nvim doom-emacs;
+    if command -v $ed &>/dev/null
+        export VISUAL="$ed"
+        export EDITOR="$ed"
+    end
 end
