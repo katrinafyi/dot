@@ -12,7 +12,7 @@
 	d = diff
 	pu = pull --all
 	p = push
-	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%d%Creset%C(brightblack) - %cs%Creset' --abbrev-commit
+	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%Creset%C(brightblack) %C(yellow)%ch%Creset%C(auto)%d%Creset' --abbrev-commit
 	on = oneline
 	scalafmt = "!./mill fmt && git add -u && git c -m scalafmt && git push && :"
 [pull]
