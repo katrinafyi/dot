@@ -1,0 +1,17 @@
+<resources case-sensitive="yes">
+    <fanart>
+        <add-file name="cover.png"/>
+        <add-dir name="." pattern="%filename%*" mime="image/*"/>
+    </fanart>
+    <subtitle>
+        <add-file name="%filename%.srt"/>
+	<add-file name="Subs/%filename%/2_English.srt"/>
+	<add-dir name="Subs/%filename%" ext="srt"/>
+        <add-dir pattern="%filename%*" ext="srt"/>
+    </subtitle>
+    <resource>
+        <add-file name="cover.png"/>
+        <add-file name="%filename%.srt"/>
+	<add-file name="Subs/%filename%/2_English.srt"/>
+    </resource>
+</resources>
