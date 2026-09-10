@@ -14,6 +14,8 @@ if status is-interactive
     abbr -a -- - popd
     abbr -a -- d 'doom-emacs'
 
+    abbr -a -- ll 'ls -l'
+
     bind \b backward-kill-path-component
     bind \e\[3\;5\~ kill-word
     bind \cZ echo fg
