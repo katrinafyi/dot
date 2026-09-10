@@ -1,6 +1,0 @@
-[Desktop Entry]
-Exec=/home/rina/.local/bin/swap_esc_caps.sh
-Icon=dialog-scripts
-Name=swap_esc_caps.sh
-Type=Application
-X-KDE-AutostartScript=true

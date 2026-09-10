@@ -1,7 +1,11 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    abbr -a -- zy 'sudo zypper'
-    abbr -a -- vim nvim
+    if command -q zypper
+        abbr -a -- zy 'sudo zypper'
+    end
+    if command -q nvim
+        abbr -a -- vim nvim
+    end
     abbr -a -- gg jj
     abbr -a -- j j
     abbr -a -- p pueue
