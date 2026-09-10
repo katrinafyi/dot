@@ -1,0 +1,11 @@
+#!/bin/bash -xeu
+
+pkg="$1"
+p="$(realpath -s --relative-to="$HOME" "$2")"
+
+rm -rf ./"$pkg"/"$p"
+mkdir -p "$(dirname ./"$pkg"/"$p")"
+cp -rv "$2" ./"$pkg"/"$p"
+
+rm -rf "$2"
+ln -s ./"$pkg"/"$p" "$2"

@@ -1,0 +1,14 @@
+[Keyboard]
+RepeatDelay=200
+RepeatRate=40
+
+[Libinput][1267][12679][ELAN0672:00 04F3:3187 Mouse]
+NaturalScroll=false
+PointerAcceleration=1.000
+PointerAccelerationProfile=1
+
+[Libinput][1267][12679][ELAN0672:00 04F3:3187 Touchpad]
+NaturalScroll=true
+PointerAcceleration=0.400
+PointerAccelerationProfile=2
+ScrollFactor=2
