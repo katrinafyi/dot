@@ -7,10 +7,10 @@ Image=docker.io/gerbera/gerbera:latest
 ContainerName=gerbera
 AutoUpdate=registry
 Network=host
-Volume=/home/rina/Media/downloads:/mnt/content:ro,Z
+Volume=/home/rina/Media/downloads:/mnt/content:ro
 Volume=gerbera.volume:/var/run/gerbera:Z
-Environment=UID=0
-Environment=GID=0
+Environment=UID=1000
+Environment=GID=1000
 
 [Service]
 Restart=on-failure
