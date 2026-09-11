@@ -1,0 +1,4 @@
+[font]
+normal = { family = "ComicShannsMono Nerd Font" }
+size = 11
+builtin_box_drawing = false
