@@ -1,0 +1,57 @@
+// Default niri config (v25.11) with some additions and modifications
+// for LXQt. You may find a more recent version in
+// /usr/share/doc/niri/default-config.kdl.
+// This config is in the KDL format: https://kdl.dev
+// "/-" comments out the following node.
+// Check the wiki for a full description of the configuration:
+// https://yalter.github.io/niri/Configuration:-Introduction
+
+// Add lines like this to spawn processes at startup.
+// Note that running niri with LXQt session supports xdg-desktop-autostart,
+// which may be more convenient to use.
+// Applications spawned by niri won't be handled by lxqt-session therefor using "Session Settings
+// → Autostart" is recommended.
+// See the binds section below for more spawn examples.
+// spawn-at-startup "waybar"
+// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+   spawn-sh-at-startup "swaybg -i /usr/share/backgrounds/default.jxl"
+// The above sets the wallpaper used in the overview.
+   spawn-sh-at-startup "lxqt-session && niri msg action quit -s"
+
+hotkey-overlay {
+    // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
+    // skip-at-startup
+}
+
+// Uncomment this line to ask the clients to omit their client-side decorations if possible.
+// If the client will specifically ask for CSD, the request will be honored.
+// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
+// This option will also fix border/focus ring drawing behind some semitransparent windows.
+// After enabling or disabling this, you need to restart the apps for this to take effect.
+// prefer-no-csd
+
+// You can change the path where screenshots are saved.
+// A ~ at the front will be expanded to the home directory.
+// The path is formatted with strftime(3) to give you the screenshot date and time.
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+// You can also set this to null to disable saving screenshots to disk.
+// screenshot-path null
+
+// https://yalter.github.io/niri/Configuration%3A-Debug-Options.html
+debug {
+    // Focus on click from systray, notification ecc:
+    // honor-xdg-activation-with-invalid-serial
+    // Inhibit idleness checks with browsers:
+    dbus-interfaces-in-non-session-instances
+}
+
+// Split config by functions
+
+include "niri/input.kdl"
+include "niri/outputs.kdl"
+include "niri/visual.kdl"
+include "niri/window-rules.kdl"
+include "niri/keybinds.kdl"
+
+
