@@ -11,6 +11,8 @@ binds {
 
 }
 
+spawn-at-startup "waybar"
+
 input {
     keyboard {
         xkb {
