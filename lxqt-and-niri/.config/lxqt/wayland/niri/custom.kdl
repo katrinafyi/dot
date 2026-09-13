@@ -9,6 +9,7 @@ binds {
 
   Mod+Shift+E hotkey-overlay-title="Logout" { spawn-sh "lxqt-leave --logout"; }
 
+  Mod+1 { spawn-sh "niri msg action focus-workspace 1 ; if ! pgrep firefox; then firefox ; fi"; }
 }
 
 spawn-at-startup "waybar"
