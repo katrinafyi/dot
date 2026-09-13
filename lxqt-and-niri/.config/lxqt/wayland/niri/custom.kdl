@@ -1,10 +1,54 @@
 binds {
 
-  Mod+T hotkey-overlay-title="Terminal" { spawn-sh "lxqt-qdbus run kitty"; }
+  Mod+T hotkey-overlay-title="Terminal" { spawn "lxqt-qdbus" "run" "kitty"; }
   Mod+R hotkey-overlay-title="Runner" { spawn-sh "rofi -show drun"; }
   Mod+A hotkey-overlay-title="Runner" { spawn-sh "rofi -show drun"; }
   Mod+X hotkey-overlay-title="Switcher" { spawn-sh "lxqt-qdbus run rofi -show windows"; }
+  Mod+Tab { toggle-overview; }
+  Mod+M { maximize-window-to-edges; }
 
   Mod+Shift+E hotkey-overlay-title="Logout" { spawn-sh "lxqt-leave --logout"; }
 
+}
+
+input {
+    keyboard {
+        xkb {
+            // You can set rules, model, layout, variant and options.
+            // For more information, see xkeyboard-config(7).
+
+            // For example:
+            layout "us"
+            options "caps:escape_shifted_capslock"
+            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+
+            // If this section is empty, niri will fetch xkb settings
+            // from org.freedesktop.locale1. You can control these using
+            // localectl set-x11-keymap.
+        }
+
+        repeat-delay 300
+        repeat-rate 50
+
+        // Enable numlock on startup, omitting this setting disables it.
+        numlock
+    }
+
+    // Next sections include libinput settings.
+    // Omitting settings disables them, or leaves them at their default values.
+    // All commented-out settings here are examples, not defaults.
+    touchpad {
+        // off
+        tap
+        // dwt
+        // dwtp
+        // drag false
+        // drag-lock
+        natural-scroll
+        accel-speed 0.4
+        scroll-factor 1.5
+        // accel-profile "flat"
+        // scroll-method "two-finger"
+        // disabled-on-external-mouse
+    }
 }
