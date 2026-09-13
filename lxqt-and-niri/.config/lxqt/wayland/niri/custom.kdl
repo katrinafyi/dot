@@ -7,6 +7,7 @@ binds {
   Mod+Tab { toggle-overview; }
   Mod+M { maximize-window-to-edges; }
 
+  Mod+Shift+W hotkey-overlay-title="Logout" { spawn-sh "lxqt-leave --shutdown"; }
   Mod+Shift+E hotkey-overlay-title="Logout" { spawn-sh "lxqt-leave --logout"; }
 
   Mod+1 { spawn-sh "niri msg action focus-workspace 1 ; if ! pgrep firefox; then firefox ; fi"; }
@@ -54,4 +55,9 @@ input {
         // scroll-method "two-finger"
         // disabled-on-external-mouse
     }
+}
+
+output "eDP-1" {
+    // off
+    scale 1.25
 }
