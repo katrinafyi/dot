@@ -1,0 +1,10 @@
+binds {
+
+  Mod+T hotkey-overlay-title="Terminal" { spawn-sh "lxqt-qdbus run kitty"; }
+  Mod+R hotkey-overlay-title="Runner" { spawn-sh "rofi -show drun"; }
+  Mod+A hotkey-overlay-title="Runner" { spawn-sh "rofi -show drun"; }
+  Mod+X hotkey-overlay-title="Switcher" { spawn-sh "lxqt-qdbus run rofi -show windows"; }
+
+  Mod+Shift+E hotkey-overlay-title="Logout" { spawn-sh "lxqt-leave --logout"; }
+
+}

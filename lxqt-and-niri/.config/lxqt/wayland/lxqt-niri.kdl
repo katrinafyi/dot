@@ -53,5 +53,6 @@ include "niri/outputs.kdl"
 include "niri/visual.kdl"
 include "niri/window-rules.kdl"
 include "niri/keybinds.kdl"
+include "niri/custom.kdl"
 
 
