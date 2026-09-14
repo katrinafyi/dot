@@ -1,6 +1,7 @@
 binds {
 
   Mod+T hotkey-overlay-title="Terminal" { spawn "lxqt-qdbus" "run" "kitty"; }
+  Mod+Return hotkey-overlay-title="Terminal" { spawn "lxqt-qdbus" "run" "kitty"; }
   Mod+A hotkey-overlay-title="Runner" { spawn-sh "rofi -show drun"; }
   Mod+X hotkey-overlay-title="Switcher" { spawn-sh "lxqt-qdbus run rofi -show windows"; }
   Mod+Tab { toggle-overview; }
