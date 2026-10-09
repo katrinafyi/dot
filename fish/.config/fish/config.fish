@@ -12,7 +12,7 @@ if status is-interactive
     abbr -a -- g git
     # abbr -a -- cd pushd
     abbr -a -- - popd
-    abbr -a -- d 'doom-emacs'
+    abbr -a -- d 'doom-emacs -nw'
 
     abbr -a -- ll 'ls -l'
 
