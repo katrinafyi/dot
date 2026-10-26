@@ -14,6 +14,7 @@
 	p = push
 	oneline = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset: %s%C(auto)%Creset%C(brightblack) %C(yellow)%ch%Creset%C(auto)%d%Creset' --abbrev-commit
 	on = oneline
+	re = "!git submodule deinit -f . && git submodule update --init && git reset --hard"
 	scalafmt = "!./mill fmt && git add -u && git c -m scalafmt && git push && :"
 [pull]
 	rebase = true

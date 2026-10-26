@@ -15,6 +15,7 @@ if status is-interactive
     abbr -a -- d 'doom-emacs -nw'
 
     abbr -a -- ll 'ls -l'
+    abbr -a -- http.serve 'python3 -m http.server -d'
 
     bind \b backward-kill-path-component
     bind \e\[3\;5\~ kill-word
@@ -39,6 +40,8 @@ if status is-interactive
     end
 
     if [ -f /run/.toolboxenv ]
+        alias open='flatpak-spawn --host /usr/bin/xdg-open'
+
         if ! [ -d /nix/store ] && [ -d ~/.local/share/nix/root/nix ]
             sudo mkdir -p /nix
             sudo mount --bind ~/.local/share/nix/root/nix /nix
