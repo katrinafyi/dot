@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/var/home/rina/dot/ssh_reverse_forward.sh
+Icon=application-x-shellscript
+Name=ssh_reverse_forward.sh
+Type=Application
+X-KDE-AutostartScript=true
