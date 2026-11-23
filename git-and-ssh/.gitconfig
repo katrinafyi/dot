@@ -16,6 +16,7 @@
 	on = oneline
 	re = "!git submodule deinit -f . && git submodule update --init && git reset --hard"
 	scalafmt = "!./mill fmt && git add -u && git c -m scalafmt && git push && :"
+        b = "for-each-ref --sort=committerdate refs/heads/ refs/remotes/origin/ --exclude 'refs/remotes/*/gh-readonly-queue/*/*' --format='%(HEAD) %(align:35)%(color:yellow)%(refname:short)%(color:reset)%(end) - %(color:red)%(objectname:short)%(color:reset) - %(align:40)%(contents:subject)%(end) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 [pull]
 	rebase = true
 [url "https://invent.kde.org/"]
